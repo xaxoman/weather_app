@@ -1,3 +1,149 @@
+:root {
+
+   --dark-blue: #1e5799;
+    --light-blue: #2989d8;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #f0f0f0;
+    --light-gray: #f8f8f8;
+    --dark-gray: #3e3e3e;
+}
+
+
+/* Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* dark blue, light blue and white gradient  */
+    background: linear-gradient(-45deg, var(--dark-blue), var(--light-blue), var(--white));
+}
+
+main {
+
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+
+#weather_submit {
+
+    background: var(--light-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+}
+
+#weather_submit:hover {
+    background: var(--dark-blue);
+    transition: 0.3s;
+}
+
+.weather_controls {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0; /* Removes whitespace between elements */
+
+}
+
+.weather_controls button {
+
+    color: var(--dark-gray);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 0.2rem;
+    transition: 0.3s;
+}
+
+.weather_controls button:active {
+    background: var(--light-blue);
+    color: var(--white);
+}
+
+
+
+.weather_controls input {
+
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    margin: 0;
+    margin-left: 0.5rem;
+}
+
+.weather_controls input:focus {
+    outline: none;
+}
+
+.weather_main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    text-align: left;
+}
+
+.weather_main_info h1, h3 {
+
+    margin-bottom: -0.5rem;
+    margin-left: 0.5rem;
+
+}
+
+.weather_main_info p {
+
+    margin: 0.5rem;
+    color: var(--dark-gray);
+
+}
+
+#weather_week {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#weather_week h2 {
+
+    font-size: 1rem;
+    margin: 0.5rem;
+    
+}
+
+#weather_week div {
+
+    background-color: var(--light-gray);
+    padding: 10px;
+    border-radius: 0.5rem;
+    min-width: 6rem;
+    max-width: 6rem;
+    max-height: 6rem;
+
+}
+
+.weather_container i {
+
+    font-size: 1.5rem;
 }

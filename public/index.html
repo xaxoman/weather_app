@@ -1,16 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- colored ICONS FOR THE WEATHER -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Widget meteo minimal</title>
 </head>
 <body>
-    <p>Hello World!</p>
+    <main>
+        <div class="weather_container">
+            <div class="weather_controls">
+                <button id="celsius" class="unit-btn active">°C</button>
+                <button id="fahrenheit" class="unit-btn">°F</button>
+            <form>
+                <input type="text" placeholder="Nome della città" required>
+                <button id="weather_submit" type="submit">Cerca</button>
+            </form>
+            </div>
+            <div class="weather_main">
+            <div style="display: flex; align-items: center;">
+               <div>
+                <i id="weather_main_icon" class="wi wi-day-cloudy" style="font-size: 2rem;"></i>
+               </div>
+              <div class="weather_main_info">
+                <h1 id="weather_main_temp">20°C</h1>
+                <h3  id="weather_main_city">New York</h3>
+                <p  id="weather_main_descr">Sunny</p>
+              </div>
+            </div>
+            <div style="color: var(--dark-gray);">
+                <p id="weather_main_humidity">Umidità: 65%</p>
+                <p id="weather_main_wind">Vento: 6 mph</p>
+            </div>
+            </div>
+            <div id="weather_week">
+            <div>
+                <h2>Lunedì</h2>
+                <i class="wi wi-day-sunny"></i>
+                <p>20°C</p>
+            </div>
+            <div>
+                <h2>Martedì</h2>
+                <i class="wi wi-cloud"></i>
+                <p>20°C</p>
+            </div>
+            <div>
+                <h2>Mercoledì</h2>
+                <i class="wi wi-rain"></i>
+                <p>20°C</p>
+            </div>
+            <div>
+                <h2>Giovedì</h2>
+                <i class="wi wi-day-cloudy"></i>
+                <p>20°C</p>
+            </div>
+            <div>
+                <h2>Venerdì</h2>
+                <i class="wi wi-thunderstorm"></i>
+                <p>20°C</p>
+            </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="client.js"></script>
 
-
-     <script src="../index.js"></script>
+    <!-- NON C'è BISOGNO DI IMPORTARE IL FILE INDEX.JS O SERVER.JS -->
 </body>
 </html>
