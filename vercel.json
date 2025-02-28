@@ -6,24 +6,18 @@
       "use": "@vercel/node"
     },
     {
-      "src": "public/**/*",
+      "src": "public/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/weather",
-      "dest": "index.js",
-      "headers": {
-        "Cache-Control": "no-cache, no-store, must-revalidate"
-      }
+      "src": "/weather(.*)",
+      "dest": "index.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/public/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=3600"
-      }
+      "dest": "public/$1"
     }
   ]
 }
